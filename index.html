@@ -4,21 +4,39 @@
 		<link type="text/css" href="css/style.css" rel="stylesheet">
 	</head>
 	<body>
-		<div class="employer_container">
-			<div class="employer_list">
-				<span id="username001">Иванов</span>
-				<img class="deleteEmployer" src="img/x-icon.svg" alt="X">
-			</div>			
-			<div class="employer_list">
-				<span id="username002">Петорв</span>
-				<img class="deleteEmployer" src="img/x-icon.svg" alt="X">
+		<div class="container_wrapper">
+			<div class="employers lined">
+				<h1 class="lined">Сотрудники:</h1>
+				<div class="button button_active">
+					<span id="username001">Иванов</span>
+					<img class="deleteEmployer" src="img/x-icon.svg" alt="X">
+				</div>			
+				<div class="button">
+					<span id="username002">Петров</span>
+					<img class="deleteEmployer" src="img/x-icon.svg" alt="X">
+				</div>
+				<div class="button">
+					<span id="username003">Сидоров</span>
+					<img class="deleteEmployer" src="img/x-icon.svg" alt="X">
+				</div>
+				<div class="button" id="addEmployer">
+					+
+				</div>
 			</div>
-			<div class="employer_list">
-				<span id="username003">Сидоров</span>
-				<img class="deleteEmployer" src="img/x-icon.svg" alt="X">
-			</div>
-			<div class="employer_card">
-				<span 
+			<div class="employer_card lined">
+				<span class="button" id="editEmployer">Редактировать</span>
+				<div>
+					<div class="">ФИО</div>
+					<div id="userName">---</div>
+				</div>
+				<div>
+					<div class="">Электронная почта</div>
+					<div id="eMail">---</div>
+				</div>
+				<div>
+					<div class="">Комментарий</div>
+					<div id="Comment">---</div>
+				</div>
 			</div>
 		</div>
 	</body>

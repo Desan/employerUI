@@ -3,21 +3,43 @@ body {
    font-weight: 300;
 }
 
+h1 {
+	padding-bottom: 24px;
+	font-weight: 600;
+}
+
+.lined {
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+}
 /*
 	employer block
 */
-.employer_container {
+.container_wrapper {
 	width: 800px;
 	margin: auto;
 	padding-top: 200px;
 }
 
-.employer_list {
+.employers {
+	padding-bottom: 24px;
+}
+
+.button {
 	display: inline;
 	background-color: #8A2A2B;
-	margin: 12px;
+	margin-right: 24px;
 	padding: 12px;
 	color: white;
+	border-radius: 6px;
+}
+.button:hover {
+	background-color: #4e1819;
+	cursor: pointer;
+}
+
+.button_active {
+	background-color: #3b1213;
 }
 
 .deleteEmployer {
@@ -27,4 +49,13 @@ body {
 	position: absolute;
 	margin-top: -12px;
 	background: black;
+}
+
+.employer_card {
+	background-color: #ECE7E7;
+	padding: 24px;
+}
+
+#editEmployer {
+	float: right;
 }
