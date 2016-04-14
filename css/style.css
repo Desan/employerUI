@@ -1,0 +1,30 @@
+body {
+   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   font-weight: 300;
+}
+
+/*
+	employer block
+*/
+.employer_container {
+	width: 800px;
+	margin: auto;
+	padding-top: 200px;
+}
+
+.employer_list {
+	display: inline;
+	background-color: #8A2A2B;
+	margin: 12px;
+	padding: 12px;
+	color: white;
+}
+
+.deleteEmployer {
+	box-shadow: rgba(0,0,0,0.4) 2px 2px;
+	height: 24px;
+	width: 24px;
+	position: absolute;
+	margin-top: -12px;
+	background: black;
+}
