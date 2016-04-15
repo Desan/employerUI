@@ -59,3 +59,7 @@ h1 {
 #editEmployer {
 	float: right;
 }
+
+.field {
+	padding-bottom: 12px;
+}
