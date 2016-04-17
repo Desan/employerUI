@@ -2,11 +2,13 @@
 	<head>
 		<link type="text/css" href="css/normalize.css" rel="stylesheet">
 		<link type="text/css" href="css/style.css" rel="stylesheet">
+		
+		<meta charset="UTF-8">
 	</head>
 	<body>
 		<div class="container_wrapper">
+			<h1 class="lined">Сотрудники:</h1>
 			<div class="employers lined">
-				<h1 class="lined">Сотрудники:</h1>
 				<div class="button button_active">
 					<span id="username001">Иванов</span>
 					<img class="deleteEmployer" src="img/x-icon.svg" alt="X">
@@ -62,7 +64,21 @@
 					<p id="Comment">---</p>
 				</div>
 			</div>
+			<div class="addEmployerPopup_overlay">
+				<div class="addEmployer">
+				<form>
+					<label>ФИО* </br>
+					<input type="text" name="employerNameField"></br>
+					Электронная почта*</br>
+					<input type="text" name="eMailField"></br>
+					Комментарий</br>
+					<input type="text" name="employerNameField"></br>
+					<input class="button" type="submit" value="Добавить">
+				</form>
+				<div>
+			</div>
 		</div>
-	<link type="javascript" href="js/main.js">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script src="js/main.js"></script>
 	</body>
 </html>

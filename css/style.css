@@ -13,10 +13,10 @@ h1 {
 	border-bottom-width: 2px;
 }
 /*
-	employer block
+	employer block -------------------------------------------------------------
 */
 .container_wrapper {
-	width: 800px;
+	max-width: 800px;
 	margin: auto;
 	padding-top: 200px;
 }
@@ -26,9 +26,9 @@ h1 {
 }
 
 .button {
-	display: inline;
+	display: inline-block;
 	background-color: #8A2A2B;
-	margin-right: 24px;
+	margin: 0px 0px 12px 12px;
 	padding: 12px;
 	color: white;
 	border-radius: 6px;
@@ -44,10 +44,13 @@ h1 {
 
 .deleteEmployer {
 	box-shadow: rgba(0,0,0,0.4) 2px 2px;
+	position: relative;
+	display: block;
+	top: -12px;
+	left: 90%;
 	height: 24px;
 	width: 24px;
-	position: absolute;
-	margin-top: -12px;
+	margin-top: -24px;
 	background: black;
 }
 
@@ -63,3 +66,33 @@ h1 {
 .field {
 	padding-bottom: 12px;
 }
+
+/* 
+Form -------------------------------------------------------------------
+ */
+ .addEmployerPopup_overlay {
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.7);
+	text-align: center;
+ }
+ 
+.addEmployerPopup_overlay:after {
+	display: inline-block;
+	height: 100%;
+	width: 0;
+	vertical-align: middle;
+	content: '';
+}
+
+ .addEmployer {
+	display: inline-block;
+	position: relative;
+	max-width: 80%;
+	vertical-align: middle;
+ }
+ 
