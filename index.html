@@ -1,81 +1,63 @@
 <html lang="ru_RU">
 	<head>
 		<link type="text/css" href="css/normalize.css" rel="stylesheet">
-		<link type="text/css" href="css/style.css" rel="stylesheet">
-		
+		<link type="text/css" href="css/style.css" rel="stylesheet">		
 		<meta charset="UTF-8">
 	</head>
 	<body>
-		<div class="container_wrapper">
-			<h1 class="lined">Сотрудники:</h1>
-			<div class="employers lined">
-				<div class="button button_active">
+		<div class="container">
+			<h1 class="underline">Сотрудники:</h1>
+			<ul class="staff_list underline">
+				<li class="button button-active">
 					<span id="username001">Иванов</span>
-					<img class="deleteEmployer" src="img/x-icon.svg" alt="X">
-				</div>			
-				<div class="button">
+					<img class="black-cross deleteWorker" src="img/x-icon.svg" alt="X">
+				</li>
+				<li class="button">
 					<span id="username002">Петров</span>
-					<img class="deleteEmployer" src="img/x-icon.svg" alt="X">
-				</div>
-				<div class="button">
+					<img class="black-cross deleteWorker" src="img/x-icon.svg" alt="X">
+				</li>
+				<li class="button">
 					<span id="username003">Сидоров</span>
-					<img class="deleteEmployer" src="img/x-icon.svg" alt="X">
-				</div>
-				<div class="button button_active">
-					<span id="username001">Иванов</span>
-					<img class="deleteEmployer" src="img/x-icon.svg" alt="X">
-				</div>			
-				<div class="button">
-					<span id="username002">Петров</span>
-					<img class="deleteEmployer" src="img/x-icon.svg" alt="X">
-				</div>
-				<div class="button">
-					<span id="username003">Сидоров</span>
-					<img class="deleteEmployer" src="img/x-icon.svg" alt="X">
-				</div>
-				<div class="button button_active">
-					<span id="username001">Иванов</span>
-					<img class="deleteEmployer" src="img/x-icon.svg" alt="X">
-				</div>			
-				<div class="button">
-					<span id="username002">Петров</span>
-					<img class="deleteEmployer" src="img/x-icon.svg" alt="X">
-				</div>
-				<div class="button">
-					<span id="username003">Сидоров</span>
-					<img class="deleteEmployer" src="img/x-icon.svg" alt="X">
-				</div>
-				<div class="button" id="addEmployer">
+					<img class="black-cross deleteWorker" src="img/x-icon.svg" alt="X">
+				</li>
+				<li class="button" id="addEmployer">
 					+
-				</div>
-			</div>
-			<div class="employer_card lined">
-				<span class="button" id="editEmployer">Редактировать</span>
+				</li>
+			</ul>
+			<div class="staff_card underline">
+				<span class="button edit">Редактировать</span>
 				<div>
 					<div class="field">ФИО</div>
-					<div id="userName">---</div>
+					<p class="userName">---</p>
 				</div>
 				<div>
 					<div class="field">Электронная почта</div>
-					<div id="eMail">---</div>
+					<p class="userMail">---</p>
 				</div>
 				<div>
 					<div class="field">Комментарий</div>
 					<p id="Comment">---</p>
 				</div>
 			</div>
-			<div class="addEmployerPopup_overlay">
-				<div class="addEmployer">
-				<form>
-					<label>ФИО* </br>
-					<input type="text" name="employerNameField"></br>
-					Электронная почта*</br>
-					<input type="text" name="eMailField"></br>
-					Комментарий</br>
-					<input type="text" name="employerNameField"></br>
-					<input class="button" type="submit" value="Добавить">
-				</form>
-				<div>
+			<div class="popup_overlay">
+				<div class="window">
+					<img class="black-cross closeWindow" src="img/x-icon.svg" alt="X">
+					<div class="form">
+						<div class="field">
+							ФИО*
+							<input type="text" name="userName">	
+						</div>
+						<div class="field">
+							Электронная почта*
+							<input type="text" name="userMail">	
+						</div>
+						<div class="field">
+							Комментарий
+							<input type="text" name="comment">	
+						</div>
+						<input class="button" type="button" value="Сохранить">
+					</div>
+				</div>
 			</div>
 		</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>

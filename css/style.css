@@ -1,3 +1,7 @@
+/* 
+	##### BASE STYLES ######
+*/
+
 body {
    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
    font-weight: 300;
@@ -8,27 +12,25 @@ h1 {
 	font-weight: 600;
 }
 
-.lined {
+.block {
+	display: block;
+}
+
+.underline {
 	border-bottom-style: solid;
 	border-bottom-width: 2px;
 }
-/*
-	employer block -------------------------------------------------------------
-*/
-.container_wrapper {
+
+.container {
 	max-width: 800px;
 	margin: auto;
-	padding-top: 200px;
-}
-
-.employers {
-	padding-bottom: 24px;
+	padding: 200px 0 0 0;
 }
 
 .button {
 	display: inline-block;
 	background-color: #8A2A2B;
-	margin: 0px 0px 12px 12px;
+	margin: 0 12px 12px 0;
 	padding: 12px;
 	color: white;
 	border-radius: 6px;
@@ -38,39 +40,45 @@ h1 {
 	cursor: pointer;
 }
 
-.button_active {
+.button-active {
 	background-color: #3b1213;
 }
 
-.deleteEmployer {
+.black-cross {
 	box-shadow: rgba(0,0,0,0.4) 2px 2px;
 	position: relative;
 	display: block;
 	top: -12px;
-	left: 90%;
+	left: 102%;
 	height: 24px;
 	width: 24px;
 	margin-top: -24px;
 	background: black;
+	cursor: pointer;
+}
+/*
+	##### STAFF ######
+*/
+
+.staff_list {
+	padding: 0 0 24px 0;
 }
 
-.employer_card {
+.staff_card {
 	background-color: #ECE7E7;
 	padding: 24px;
 }
 
-#editEmployer {
+.edit {
 	float: right;
 }
 
 .field {
-	padding-bottom: 12px;
+	padding: 0 0 12px;
+	display: flex;
 }
 
-/* 
-Form -------------------------------------------------------------------
- */
- .addEmployerPopup_overlay {
+.popup_overlay {
 	display: none;
 	position: fixed;
 	left: 0;
@@ -81,7 +89,7 @@ Form -------------------------------------------------------------------
 	text-align: center;
  }
  
-.addEmployerPopup_overlay:after {
+.popup_overlay:after {
 	display: inline-block;
 	height: 100%;
 	width: 0;
@@ -89,10 +97,15 @@ Form -------------------------------------------------------------------
 	content: '';
 }
 
- .addEmployer {
+.popup_overlay .window {
 	display: inline-block;
 	position: relative;
 	max-width: 80%;
 	vertical-align: middle;
+	padding: 24px;
+	background-color: #ECE7E7;
  }
  
+ input[type="submit"] {
+ 	border: 0;
+ }
