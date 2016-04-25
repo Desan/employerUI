@@ -1,22 +1,21 @@
 $(document).ready(function() {
 	
-	var base = [
-		{userName: "Вася", userEmail: "none@none.no", comment: ""},
-		{userName: "Петя", userEmail: "none@none.no", comment: ""},
-		{userName: "Коля", userEmail: "none@none.no", comment: ""}
-	];
+	function addUser(user) {
+		var tab = $("<li></li>").text(user.userName);
+		var del = $('<img class="black-cross deleteWorker" src="img/x-icon.svg" alt="X">');
+		tab.addClass("button");
+		tab.append(del);
+		$(".staff_list").prepend(tab);
+		del.on('click', function() {
+			if (confirm("Вы действительно хотите удалить запись?")) 
+				tab.remove();
+		});
+	};
 
-	function reloadUsers() {
-		for (var i = 0; i < base.length; i++) {
-			console.log('<span class="button" >' + base[i].userName);
-		};
-	}
-
-	reloadUsers();
+	addUser({userName: "Лева", userEmail: "none", comment: "none"});
 
 	//open edit form
 	$("#addEmployer").on("click", function() {
-		var userName, userEmail, comment = "";
 		$('.popup_overlay').css('display', 'block');
 	});
 
@@ -32,7 +31,6 @@ $(document).ready(function() {
 
 	//delete worker and tab
 	$(".deleteWorker").on("click", function() {
-		if (confirm("Вы действительно хотите удалить запись?")) 
-			$(this).parent().remove();
+		deleteUser($(this));
 	});
 });
