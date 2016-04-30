@@ -12,8 +12,8 @@ h1 {
 	font-weight: 600;
 }
 
-.block {
-	display: block;
+textarea {
+	resize: none;
 }
 
 .underline {
@@ -24,7 +24,7 @@ h1 {
 .container {
 	max-width: 800px;
 	margin: auto;
-	padding: 200px 0 0 0;
+	padding: 5% 0 0 0;
 }
 
 .button {
@@ -40,7 +40,7 @@ h1 {
 	cursor: pointer;
 }
 
-.button-active {
+.active {
 	background-color: #3b1213;
 }
 
@@ -69,13 +69,20 @@ h1 {
 	padding: 24px;
 }
 
+.card {
+	display: none;
+}
+
+.card-active {
+	display: block;
+}
+
 .edit {
 	float: right;
 }
 
 .field {
 	padding: 0 0 12px;
-	display: flex;
 }
 
 .popup_overlay {
@@ -98,6 +105,7 @@ h1 {
 }
 
 .popup_overlay .window {
+	text-align: left;
 	display: inline-block;
 	position: relative;
 	max-width: 80%;

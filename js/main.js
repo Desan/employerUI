@@ -1,18 +1,45 @@
 $(document).ready(function() {
 	
 	function addUser(user) {
-		var tab = $("<li></li>").text(user.userName);
-		var del = $('<img class="black-cross deleteWorker" src="img/x-icon.svg" alt="X">');
-		tab.addClass("button");
+
+		var card = $("<div></div>")
+			.text("")
+			.addClass("card");
+		for (var prop in user) {
+			var field = $('<p></p>').text(user[prop]);
+			card.append(field);
+		};
+
+		var tab = $("<li></li>")
+			.text(user.userName)
+			.addClass("button")
+			.on('click', function() {
+				card.siblings().removeClass('card-active');
+				card.addClass('card-active');
+			});
+
+
+		var del = $('<img class="black-cross deleteWorker" src="img/x-icon.svg" alt="X">')
+			.on('click', function() {
+				if (confirm("Вы действительно хотите удалить запись?")) {
+					tab.remove();
+					card.remove();
+				}
+			});
+
 		tab.append(del);
+
+
+
 		$(".staff_list").prepend(tab);
-		del.on('click', function() {
-			if (confirm("Вы действительно хотите удалить запись?")) 
-				tab.remove();
-		});
+		$('.staff_card').prepend(card);
+
+
 	};
 
-	addUser({userName: "Лева", userEmail: "none", comment: "none"});
+	addUser({userName: "Иванов", userEmail: "none", comment: "1"});
+	addUser({userName: "Петров", userEmail: "none", comment: "2"});
+
 
 	//open edit form
 	$("#addEmployer").on("click", function() {
@@ -29,8 +56,4 @@ $(document).ready(function() {
 		event.stopPropagation();
 	});
 
-	//delete worker and tab
-	$(".deleteWorker").on("click", function() {
-		deleteUser($(this));
-	});
 });
