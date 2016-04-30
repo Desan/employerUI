@@ -3,7 +3,6 @@ $(document).ready(function() {
 	function addUser(user) {
 
 		var card = $("<div></div>")
-			.text("")
 			.addClass("card");
 		for (var prop in user) {
 			var field = $('<p></p>').text(user[prop]);
