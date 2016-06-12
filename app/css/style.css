@@ -14,12 +14,9 @@ h1 {
 
 textarea {
 	resize: none;
+	width: 100%;
 }
 
-.underline {
-	border-bottom-style: solid;
-	border-bottom-width: 2px;
-}
 
 .container {
 	max-width: 800px;
@@ -27,64 +24,17 @@ textarea {
 	padding: 5% 0 0 0;
 }
 
-.button {
-	display: inline-block;
-	background-color: #8A2A2B;
-	margin: 0 12px 12px 0;
-	padding: 12px;
-	color: white;
-	border-radius: 6px;
-}
-.button:hover {
-	background-color: #4e1819;
-	cursor: pointer;
-}
 
 .active {
 	background-color: #3b1213;
 }
 
-.black-cross {
-	box-shadow: rgba(0,0,0,0.4) 2px 2px;
-	position: relative;
-	display: block;
-	top: -12px;
-	left: 102%;
-	height: 24px;
-	width: 24px;
-	margin-top: -24px;
-	background: black;
-	cursor: pointer;
-}
+
+
+
 /*
-	##### STAFF ######
+ Popup 
 */
-
-.staff_list {
-	padding: 0 0 24px 0;
-}
-
-.staff_card {
-	background-color: #ECE7E7;
-	padding: 24px;
-}
-
-.card {
-	display: none;
-}
-
-.card-active {
-	display: block;
-}
-
-.edit {
-	float: right;
-}
-
-.field {
-	padding: 0 0 12px;
-}
-
 .popup_overlay {
 	display: none;
 	position: fixed;
@@ -114,6 +64,3 @@ textarea {
 	background-color: #ECE7E7;
  }
  
- input[type="submit"] {
- 	border: 0;
- }

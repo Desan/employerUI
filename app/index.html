@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru" ng-app="userEditor">
+  <head>
+    <title>Employer UI</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/main.js"></script>
+    <div ng-controller="TabController" class="container">
+      <h1 class="-underline">Сотрудники:</h1>
+      <section>
+        <ul class="staff_list -underline">
+          <li ng-repeat="tab in users" ng-class="{ active: isActive(tab)}" class="-button"> <a href ng-click="setTab(tab)">{{tab.name}}<img src="img/x-icon.svg" ng-click="deleteUser(tab)" class="black-cross"></a></li>
+          <li class="-button">+</li>
+        </ul>
+        <div class="staff_card -underline">
+          <p>Имя: {{current.name}}</p>
+          <p>E-mail: {{current.email}}</p>
+          <p>Комментарий: {{current.comment || "-"}}</p>
+        </div>
+      </section>
+    </div>
+    <div ng-show="modal.open" class="popup_overlay">
+      <div class="window"><a><img src="img/x-icon.svg" class="black-cross closeWindow"></a>
+        <div class="form">
+          <div class="field -required">ФИО</div>
+          <input type="text" name="userName">
+          <div class="field -required">Электронный адрес</div>
+          <input type="text" name="userMail">
+          <div class="field">Комментарий</div>
+          <textarea type="text" name="comment"></textarea>
+          <input type="button" value="Сохранить" class="-button">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

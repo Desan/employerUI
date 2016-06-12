@@ -1,0 +1,35 @@
+/*
+
+	Details and state of elements
+
+*/
+.-underline {
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+}
+
+.-hide {
+	display: none;
+}
+
+.-show {
+	display: block;
+}
+
+.-button {
+	display: inline-block;
+	background-color: #8A2A2B;
+	margin: 0 12px 12px 0;
+	padding: 12px;
+	color: white;
+	border-radius: 6px;
+}
+
+.-button:hover {
+	background-color: #4e1819;
+	cursor: pointer;
+}
+
+.active {
+	background-color: #3b1213;
+}

@@ -1,0 +1,46 @@
+doctype html
+html(lang="ru" ng-app="userEditor")
+	head
+		title Employer UI
+		meta(charset="UTF-8")
+
+		link(rel="stylesheet", href="css/normalize.css")
+		link(rel="stylesheet", href="css/style.css")
+		link(rel="stylesheet", href="css/styles.css")
+
+
+	body
+		script(src="js/jquery-2.2.3.min.js")
+		script(src="js/angular.min.js")
+		script(src="js/main.js")
+
+		.container(ng-controller="TabController")
+			h1.-underline Сотрудники:
+			section
+				ul.staff_list.-underline
+					li.-button(	ng-repeat="tab in users"
+								ng-class="{ active: isActive(tab)}") 
+						a(href ng-click="setTab(tab)") {{tab.name}}
+							img.black-cross(src="img/x-icon.svg" ng-click="deleteUser(tab)")
+					li.-button +
+
+				.staff_card.-underline
+					p Имя: {{current.name}}
+					p E-mail: {{current.email}}
+					p Комментарий: {{current.comment || "-"}}
+
+		.popup_overlay(data-toggle="modal")
+			.window
+				a: img.black-cross.closeWindow(src="img/x-icon.svg")
+				.form
+					.field.-required
+						| ФИО
+					input(type="text", name="userName")
+					.field.-required
+						| Электронный адрес
+					input(type="text", name="userMail")
+					.field
+						| Комментарий
+					textarea(type="text", name="comment")
+					input.-button(type="button", value="Сохранить")
+
